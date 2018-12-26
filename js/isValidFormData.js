@@ -334,7 +334,7 @@ function isValidData(obj) {
     if (propObj.value.length <= propObj.validationRules.maxLength) {
       result = true;
     } else {
-     propObj.errorMessage = 'ERROR: length of string should be less than ' + propObj.validationRules.maxLength;
+      propObj.errorMessage = 'ERROR: length of string should be less than ' + propObj.validationRules.maxLength;
     }
     return result;
   }
