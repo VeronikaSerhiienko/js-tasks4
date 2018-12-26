@@ -242,7 +242,7 @@ var validationObject = {
   checkSyntaxOfEmail: function(propObj) {
     var res = false;
     var inputEmail = propObj.value;
-    if (!(propObj.validationRules.email) || (propObj.value.length === 0) || ((inputEmail.indexOf('@') >= 1) && (inputEmail.indexOf('.') >= (inputEmail.indexOf('@') + 2)))) {
+    if ((propObj.value.length === 0) || ((inputEmail.indexOf('@') >= 1) && (inputEmail.indexOf('.') >= (inputEmail.indexOf('@') + 2)))) {
       res = true;
     } else {
       propObj.errorMessage = 'ERROR: Please enter valid email!';
@@ -339,7 +339,6 @@ function isValidData(obj) {
       return result;
   }
 
-
   function isEmpty(propObj) {
     var result = false;
     if (propObj.value === '') {
@@ -352,7 +351,7 @@ function isValidData(obj) {
   function checkSyntaxOfEmail(propObj) {
     var result = false;
     var inputEmail = propObj.value;
-    if (!(propObj.validationRules.email) || (propObj.value.length === 0) || ((inputEmail.indexOf('@') >= 1) && (inputEmail.indexOf('.') >= (inputEmail.indexOf('@') + 2)))) {
+    if ((propObj.value.length === 0) || ((inputEmail.indexOf('@') >= 1) && (inputEmail.indexOf('.') >= (inputEmail.indexOf('@') + 2)))) {
       result = true;
     } else {
       propObj.errorMessage = 'ERROR: Please enter valid email!';
