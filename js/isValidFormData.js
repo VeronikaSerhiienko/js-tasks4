@@ -293,7 +293,7 @@ console.log(form8);
 
 function isValidData(obj) {
   var isFormValid = true;
-  for ( var key in obj) {
+  for (var key in obj) {
     if (obj[key].validationRules.required){
       if (isEmpty(obj[key])) {
         isFormValid = false;
