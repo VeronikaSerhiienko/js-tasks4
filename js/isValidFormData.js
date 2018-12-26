@@ -182,7 +182,7 @@ var validationObject = {
 
   startValidation: function(obj) {
     var isFormValid = true;
-    for ( var key in obj) {
+    for (var key in obj) {
       if (obj[key].validationRules.required){
         if (this.isEmpty(obj[key])) {
           isFormValid = false;
@@ -207,7 +207,7 @@ var validationObject = {
         }  
       }
     }
-      return isFormValid;
+    return isFormValid;
   },
   
   isValidMinLength: function(propObj) {
@@ -217,7 +217,7 @@ var validationObject = {
     } else {
       propObj.errorMessage = 'ERROR: length of string should be longer than ' + propObj.validationRules.minLength;
     }
-      return res;
+    return res;
   },
 
   isValidMaxLength: function(propObj) {
@@ -225,9 +225,9 @@ var validationObject = {
     if (propObj.value.length <= propObj.validationRules.maxLength) {
       res = true;
     } else {
-     propObj.errorMessage = 'ERROR: length of string should be less than ' + propObj.validationRules.maxLength;
+      propObj.errorMessage = 'ERROR: length of string should be less than ' + propObj.validationRules.maxLength;
     }
-      return res;
+    return res;
   },
 
   isEmpty: function(propObj) {
@@ -236,7 +236,7 @@ var validationObject = {
       res = true;
       propObj.errorMessage = 'ERROR: Please fill out this field!';
     }
-      return res;
+    return res;
   },
 
   checkSyntaxOfEmail: function(propObj) {
@@ -247,7 +247,7 @@ var validationObject = {
     } else {
       propObj.errorMessage = 'ERROR: Please enter valid email!';
     }
-      return res;
+    return res;
   },
 };
 console.log('via object method');
@@ -326,7 +326,7 @@ function isValidData(obj) {
     } else {
       propObj.errorMessage = 'ERROR: length of string should be longer than ' + propObj.validationRules.minLength;
     }
-      return result;
+    return result;
   }
 
   function isValidMaxLength(propObj) { 
@@ -336,7 +336,7 @@ function isValidData(obj) {
     } else {
      propObj.errorMessage = 'ERROR: length of string should be less than ' + propObj.validationRules.maxLength;
     }
-      return result;
+    return result;
   }
 
   function isEmpty(propObj) {
@@ -345,7 +345,7 @@ function isValidData(obj) {
       result = true;
       propObj.errorMessage = 'ERROR: Please fill out this field!';
     }
-      return result;
+    return result;
   }
 
   function checkSyntaxOfEmail(propObj) {
@@ -356,7 +356,7 @@ function isValidData(obj) {
     } else {
       propObj.errorMessage = 'ERROR: Please enter valid email!';
     }
-      return result;
+    return result;
   }
-    return isFormValid;
+  return isFormValid;
 }
